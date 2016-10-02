@@ -9,10 +9,12 @@
 #
 ###############################################################################
 
+if [ -d "$1" ]; then
+    rm -r $1
+fi
 
+mkdir $1
 
-# Students - delete this line and put your work here
-
-
-
-
+for i in January February March April May June July August September October November December; do
+    mkdir -p $1/$i
+done
